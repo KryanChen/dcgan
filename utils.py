@@ -6,6 +6,7 @@ import math
 import json
 import random
 import pprint
+from PIL import Image
 import scipy.misc
 import cv2
 import numpy as np
@@ -82,6 +83,7 @@ def merge(images, size):
 def imsave(images, size, path):
   image = np.squeeze(merge(images, size))
   return scipy.misc.imsave(path, image)
+  
 
 def center_crop(x, crop_h, crop_w,
                 resize_h=64, resize_w=64):
